@@ -204,7 +204,6 @@ def end(message):
     Bot.send_message(message.chat.id,'------------------------' , reply_markup=markup)
     Bot.send_message(message.chat.id, f'Спасибо что прошёл мою викторину у тебя {bal}')
     Bot.send_message(message.chat.id, 'если нашёл ошибки обязательно сообщи мне а так же чтобы начать заного напиши /start')
-    #Bot.send_message(message.chat.id, 'Хочу сказать большое спасибо моеё самой любимой девушке за большой вклад в этого бота, он работает только благодаре тебе люблю тебя!')
 
 
 
