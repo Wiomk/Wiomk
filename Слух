@@ -1,0 +1,121 @@
+https://codeforces.com/group/PZJYXH0KrS/contest/581398/problem/A
+A. Слух
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+int bfs(vector<vector<int>>& abj, vector<bool>& used,vector<int>& cost, int start)
+{
+    std::queue<int> q;//создал очередь
+    int min_cost = 1e9;
+    q.push(start);// добавил в очередь первое вхождение
+    used[start] = true;//  сказал что был в первой точке
+    min_cost = cost[start];
+
+    while (q.size() > 0)
+    {
+        int curr = q.front();//достал первое значение в очереди
+        q.pop();// удалил
+        if (cost[curr] < min_cost) 
+        {
+            min_cost = cost[curr];
+        }
+
+        // смотрю на соседей
+        for (int i = 0; i < abj[curr].size(); ++i)
+        {
+            int next = abj[curr][i];//итый сосед текущей перемены
+
+            if (used[next] == false)
+            {
+                used[next] = true;
+                q.push(next);
+            }
+        }
+    }
+    return min_cost;
+}
+
+
+void solve()//список смежности
+//1=>2
+//2=>3
+//3=>1
+{
+    int n, m;
+    cin >> n >> m;
+
+    vector<int> cost(n + 1);
+
+    for (int u = 1; u <= n; ++u)
+    {
+        cin >> cost[u];
+    }
+
+    vector<vector<int>> abj(n + 1);
+    for (int i = 0; i < m; ++i) {
+        int u, v;
+        cin >> u >> v;
+        abj[u].push_back(v);
+        abj[v].push_back(u);
+    }
+
+    vector<bool> used(n + 1);//перебор вершин чтобы не пропустить компоненту связности
+    int summ = 0;
+
+    for (int u = 1; u <= n; ++u)
+    {
+        if (used[u] == false)
+        {
+            summ += bfs(abj, used, cost, u);
+        }
+    }
+    cout << summ << "\n";
+}
+
+int main()
+{
+    int t = 1;
+    while (t--) solve();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
