@@ -42,11 +42,11 @@ def game_1(message):
 
     # Создаём клавиатуру
     markup = types.ReplyKeyboardMarkup()
-    b1 = types.KeyboardButton('москва')  # Кнопка 1
-    b2 = types.KeyboardButton('стамбул')  # Кнопка 2
-    b3 = types.KeyboardButton('лондон')  # Кнопка 1
-    b4 = types.KeyboardButton('токио')  # Кнопка 2
-    markup.add(b1, b2, b3, b4)  # Добавляем кнопки в разметку
+    b1 = types.KeyboardButton('москва')  
+    b2 = types.KeyboardButton('стамбул')  
+    b3 = types.KeyboardButton('лондон') 
+    b4 = types.KeyboardButton('токио')  
+    markup.add(b1, b2, b3, b4)  
 
     # Отправляем вопрос с клавиатурой
     Bot.send_message(message.chat.id, 'Выбери один из вариантов:', reply_markup=markup)
@@ -66,7 +66,7 @@ def otvet_1(message):
         game_2(message)
     else:
         Bot.send_message(message.chat.id, 'Прости, я не понимаю этот ответ. Попробуй выбрать один из вариантов на клавиатуре.')
-        game_1(message)  # Повторяем вопрос
+        game_1(message)  
 
 def game_2(message):
     global bal
@@ -74,11 +74,11 @@ def game_2(message):
 
     # Создаём клавиатуру
     markup = types.ReplyKeyboardMarkup()
-    b1 = types.KeyboardButton('радио')  # Кнопка 1
-    b2 = types.KeyboardButton('тишина')  # Кнопка 2
-    b3 = types.KeyboardButton('ветер')  # Кнопка 1
-    b4 = types.KeyboardButton('эхо')  # Кнопка 2
-    markup.add(b1, b2, b3, b4)  # Добавляем кнопки в разметку
+    b1 = types.KeyboardButton('радио')  
+    b2 = types.KeyboardButton('тишина') 
+    b3 = types.KeyboardButton('ветер')  
+    b4 = types.KeyboardButton('эхо')  
+    markup.add(b1, b2, b3, b4)  
 
     Bot.send_message(message.chat.id, 'Выбери один из вариантов:', reply_markup=markup)
 
@@ -106,11 +106,11 @@ def game_3(message):
 
     # Создаём клавиатуру
     markup = types.ReplyKeyboardMarkup()
-    b1 = types.KeyboardButton('австралия')  # Кнопка 1
-    b2 = types.KeyboardButton('канада')  # Кнопка 2
-    b3 = types.KeyboardButton('сша')  # Кнопка 1
-    b4 = types.KeyboardButton('франция')  # Кнопка 2
-    markup.add(b1, b2, b3, b4)  # Добавляем кнопки в разметку
+    b1 = types.KeyboardButton('австралия')  
+    b2 = types.KeyboardButton('канада') 
+    b3 = types.KeyboardButton('сша')  
+    b4 = types.KeyboardButton('франция')  
+    markup.add(b1, b2, b3, b4) 
 
     # Отправляем вопрос с клавиатурой
     Bot.send_message(message.chat.id, 'Выбери один из вариантов:', reply_markup=markup)
@@ -136,13 +136,12 @@ def game_4(message):
     global bal
     Bot.send_message(message.chat.id, 'Вопрос 4: Какой металл является самым прочным? 150 баллов')
 
-    # Создаём клавиатуру
     markup = types.ReplyKeyboardMarkup()
-    b1 = types.KeyboardButton('железо')  # Кнопка 1
-    b2 = types.KeyboardButton('титан')  # Кнопка 2
-    b3 = types.KeyboardButton('вольфрам')  # Кнопка 1
-    b4 = types.KeyboardButton('хром')  # Кнопка 2
-    markup.add(b1, b2, b3, b4)  # Добавляем кнопки в разметку
+    b1 = types.KeyboardButton('железо') 
+    b2 = types.KeyboardButton('титан')  
+    b3 = types.KeyboardButton('вольфрам')  
+    b4 = types.KeyboardButton('хром')  
+    markup.add(b1, b2, b3, b4)  
 
     # Отправляем вопрос с клавиатурой
     Bot.send_message(message.chat.id, 'Выбери один из вариантов:', reply_markup=markup)
@@ -162,7 +161,7 @@ def otvet_4(message):
         game_5(message)
     else:
         Bot.send_message(message.chat.id, 'Прости, я не понимаю этот ответ. Попробуй выбрать один из вариантов на клавиатуре.')
-        game_4(message)  # Повторяем вопрос
+        game_4(message)  
 
 def game_5(message):
     global bal
@@ -170,11 +169,11 @@ def game_5(message):
 
     # Создаём клавиатуру
     markup = types.ReplyKeyboardMarkup()
-    b1 = types.KeyboardButton('венера')  # Кнопка 1
-    b2 = types.KeyboardButton('марс')  # Кнопка 2
-    b3 = types.KeyboardButton('нептун')  # Кнопка 1
-    b4 = types.KeyboardButton('уран')  # Кнопка 2
-    markup.add(b1, b2, b3, b4)  # Добавляем кнопки в разметку
+    b1 = types.KeyboardButton('венера')  
+    b2 = types.KeyboardButton('марс') 
+    b3 = types.KeyboardButton('нептун') 
+    b4 = types.KeyboardButton('уран')  
+    markup.add(b1, b2, b3, b4) 
 
     # Отправляем вопрос с клавиатурой
     Bot.send_message(message.chat.id, 'Выбери один из вариантов:', reply_markup=markup)
