@@ -203,7 +203,7 @@ def end(message):
     markup.add(b1)# Кнопка 1
     Bot.send_message(message.chat.id,'------------------------' , reply_markup=markup)
     Bot.send_message(message.chat.id, f'Спасибо что прошёл мою викторину у тебя {bal}')
-    Bot.send_message(message.chat.id, 'если нашёл ошибки обязательно сообщи мне а так же чтобы начать заного напиши /start')
+
 
 
 
