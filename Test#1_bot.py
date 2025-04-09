@@ -97,8 +97,7 @@ def otvet_2(message):
         game_3(message)
     else:
         Bot.send_message(message.chat.id, 'Прости, я не понимаю этот ответ. Попробуй выбрать один из вариантов на клавиатуре.')
-        game_2(message)  # Повторяем вопрос
-
+        game_2(message)  
 def game_3(message):
     global bal
 
@@ -193,13 +192,13 @@ def otvet_5(message):
         end(message)
     else:
         Bot.send_message(message.chat.id, 'Прости, я не понимаю этот ответ. Попробуй выбрать один из вариантов на клавиатуре.')
-        game_5(message)  # Повторяем вопрос
+        game_5(message)  
 
 def end(message):
     global bal
     markup = types.ReplyKeyboardMarkup()
     b1 = types.KeyboardButton('/start')
-    markup.add(b1)# Кнопка 1
+    markup.add(b1)
     Bot.send_message(message.chat.id,'------------------------' , reply_markup=markup)
     Bot.send_message(message.chat.id, f'Спасибо что прошёл мою викторину у тебя {bal}')
 
